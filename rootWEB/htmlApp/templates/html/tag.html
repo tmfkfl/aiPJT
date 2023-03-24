@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+      <pre>
+        기본태그에 대해서 알아볼까요?
+          개행시 사용하는 태그 <br/> ,  <p/>
+          단락을 띄울때는 p
+          한줄을 띄울때는 br
+
+          표를 만드는 태그 table
+          - table : th(header), tr(record), td(data)
+
+          정적리소스(css, javascript, img)
+          - 이미지 삽입(세팅)
+          - static 디렉토리에서 관리되어짐.
+
+          정적인 웹페이지에 동적인 작업을 위해서는 template tag
+          -{{ print }}, 제어구문, 반복구문, 페이지 인크루드, 정적리소스를 로드
+
+      </pre>
+
+      html은 기본적으로 개행, 스페이스가 적용되지 않습니다.<br>
+      html css javascript
+       <section>
+            <article>
+                <a href="http://www.naver.com" target ="_self">naver</a><br/>
+                <a href="http://www.naver.com" target ="_blank">naver</a><p/>
+                <a href="http://www.naver.com" target ="_parent">naver</a><br/>
+                <a href="http://www.naver.com" target ="_top">naver</a><p/>
+            </article>
+       </section>
+       <section>
+           <article>
+               <dl>
+                   <dt>JAVA</dt>
+                       <dd>-jsp</dd>
+                   <dt>DJANGO</dt>
+                       <dd>-web</dd>
+                   <dt>PYTHON</dt>
+                       <dd>-pandas</dd>
+               </dl>
+           </article>
+       </section>
+       <section>
+           <article>
+               <table border="1">
+                   <tr>
+                       <th>고객번호</th><th>고객이름</th><th>포인트</th><th>전화번호</th>
+                   </tr>
+                   <tr>
+                       <td>1</td><td>임정섭</td><td>10000</td><td>010-XXXX-XXXX</td>
+                   </tr>
+                   <tr>
+                       <td>2</td><td>김태성</td><td>10000</td><td>010-XXXX-XXXX</td>
+                   </tr>
+                   <tr>
+                       <td>3</td><td>최유진</td><td>10000</td><td>010-XXXX-XXXX</td>
+                   </tr>
+               </table>
+           </article>
+           <section>
+               <article>
+                   <img src="../../static/img/dog.jpg/"/>
+                   <img src="{% static '/img/dog.jpg'%}"/>
+               </article>
+           </section>
+</body>
+</html>
